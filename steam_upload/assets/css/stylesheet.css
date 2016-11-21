@@ -1,0 +1,365 @@
+/*
+* —---------------- Main stuff —----------------
+*/
+
+html {
+	height: 100%;
+}
+
+body {
+	background: url(../images/colored_body_top.png) center top no-repeat #1b2838;
+	color: #c6d4df;
+	position: relative;
+	min-height: 100%;
+}
+
+#main_header{
+	background: #171a21;
+	text-align:center;
+	padding:10px;
+}
+
+
+
+/*
+* —---------------- Home —----------------
+*/
+
+#profile_holder{
+	overflow: hidden;
+	margin: 20px auto;
+	background-color: rgba(0, 0, 0, 0.4);
+	max-width: 800px;
+	padding: 20px 20px 50px 20px;
+}
+
+#profile_holder ul{
+    list-style-type: none;
+}
+
+.game_box {
+	overflow: hidden;
+	margin: 20px auto;
+	background-color: rgba(0, 0, 0, 0.4);
+	max-width: 800px;
+}
+
+.game_box h1 a{
+	color: #67c1f5;
+	text-decoration: none;
+}
+
+.price_hour {
+	position:relative;
+		
+}
+
+.price_hour h1{
+	font-size: 50px;
+	font-weight: 700;
+	margin-top: 40px;
+	
+}
+
+/*
+* —---------------- Buttons —----------------
+*/
+
+.btn {
+	border-radius: 2px;
+	border: none;
+	padding: 5px;
+	margin-top: 5px;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	color: #67c1f5 ;
+	background: rgba( 103, 193, 245, 0.2 );
+}
+
+.btn .glyphicon{
+	color: #a0b3cb;
+}
+
+.btn:hover {
+	color: #FFF;
+	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);	
+	
+}
+
+/*
+* —---------------- Login —----------------
+*/
+
+#inlog_menu {
+	margin: 50px auto;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.4);
+	max-width: 400px;
+	text-align: center;
+}
+
+#inlog_menu input{
+	background-color: #2a3f5a;
+	color: #fff;
+	border: 1px solid #000;
+	border-radius: 3px;
+	box-shadow: 1px 1px 0px #45556c;
+	margin: 4px 0;
+	text-align: center;
+}
+
+#inlog_menu button{
+	border-radius: 2px;
+	border: none;
+	padding: 1px;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	color: #67c1f5 ;
+	background: rgba( 103, 193, 245, 0.2 );
+}
+
+#inlog_menu button > span {
+    padding: 0 15px;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+
+/*
+* —---------------- Loader —----------------
+*/
+.hidden{
+	display: none;	
+}
+
+.loading {
+	position: relative;
+	max-width: 800px;
+	margin: 20px auto;
+	text-align:center;
+	margin-top: 200px;
+}
+
+.cs-loader {
+	position: relative;
+	height: 50px;
+	width: 100%;
+	margin-top: 40px;
+}
+
+.cs-loader-inner {
+  transform: translateY(-50%);
+  top: 50%;
+  position: absolute;
+  width: 100%;
+  color: #FFF;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.cs-loader-inner label {
+  font-size: 20px;
+  opacity: 0;
+  display:inline-block;
+}
+
+@keyframes lol {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  33% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  66% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+}
+
+@-webkit-keyframes lol {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+  }
+  33% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+  66% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(300px);
+  }
+}
+
+.cs-loader-inner label:nth-child(6) {
+  -webkit-animation: lol 3s infinite ease-in-out;
+  animation: lol 3s infinite ease-in-out;
+}
+
+.cs-loader-inner label:nth-child(5) {
+  -webkit-animation: lol 3s 100ms infinite ease-in-out;
+  animation: lol 3s 100ms infinite ease-in-out;
+}
+
+.cs-loader-inner label:nth-child(4) {
+  -webkit-animation: lol 3s 200ms infinite ease-in-out;
+  animation: lol 3s 200ms infinite ease-in-out;
+}
+
+.cs-loader-inner label:nth-child(3) {
+  -webkit-animation: lol 3s 300ms infinite ease-in-out;
+  animation: lol 3s 300ms infinite ease-in-out;
+}
+
+.cs-loader-inner label:nth-child(2) {
+  -webkit-animation: lol 3s 400ms infinite ease-in-out;
+  animation: lol 3s 400ms infinite ease-in-out;
+}
+
+.cs-loader-inner label:nth-child(1) {
+  -webkit-animation: lol 3s 500ms infinite ease-in-out;
+  animation: lol 3s 500ms infinite ease-in-out;
+}
+
+/*
+* —---------------- Menu —----------------
+*/
+
+#navbar{
+    position: relative;
+    margin: 5px;
+    font-size: 13px;
+	text-align: center;
+}
+
+.nav_item.active,  .nav_item:hover{
+	color: #dadada;
+    text-decoration: none;
+    border-radius: 2px;
+	background: rgba(47,137,188,1);
+	background: linear-gradient( to bottom, rgba(47,137,188,1) 5%, rgba(23,67,92,1) 95%);
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.75) inset, -2px -2px 5px rgba(150,150,150,1) inset;
+}
+
+.nav_item {
+	border-radius: 2px;
+	border: none;
+	padding: 1px;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	color: #A4D7F5;
+	background: #000;
+	
+}
+
+.nav_item > span{
+	box-shadow: inset 0 1px 1px #434343;
+	text-transform: uppercase;
+	padding: 3px 20px;
+	font-size: 12px;
+	border-radius: 2px;
+	display: block;
+	background: #2B2B2B;
+	background: linear-gradient( to bottom, #2B2B2B 5%, #202020 95%);
+}
+
+.nav_item.active > span,  .nav_item:hover > span{
+	background: rgba(33,101,138,1);
+	background: linear-gradient( to bottom, rgba(33,101,138,1) 5%, rgba(23,67,92,1) 95%);
+	
+}
+
+/*
+* —---------------- recommended games —----------------
+*/
+
+#recommended_games{
+	text-align:center;	
+}
+
+.recommended_game{
+	display: inline-block;
+	padding: 10px;
+}
+
+
+/*
+* —---------------- friendlist —----------------
+*/
+
+.friend_holder{
+	overflow: hidden;
+	margin: 20px auto;
+	background-color: rgba(0, 0, 0, 0.4);
+	max-width: 800px;
+	padding: 20px;
+	line-height: 6px;
+}
+
+.friend_holder h3{
+	margin-top: 0;
+}
+
+.friend_img_holder{
+	position: relative;
+	width: 120px;
+	height: 120px;
+	background: linear-gradient( to bottom, rgba(83,164,196,1) 5%, rgba(69,128,151,1) 95%);
+	
+}
+
+.friend_inner_img_holder{
+	position: absolute;
+	display:block;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+}
+
+.friend_img_holder img{
+	display: block;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.friend_holder ul{
+    list-style-type: none;
+}
+
+
+/*
+* —---------------- Footer —----------------
+*/
+
+#footer_spacer{
+	height: 110px;
+}
+
+#main_footer{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	max-height:300px;
+	padding: 20px 0;
+	background:#000;
+	color: #67c1f5;
+	text-align:center;
+	overflow:hidden;
+}

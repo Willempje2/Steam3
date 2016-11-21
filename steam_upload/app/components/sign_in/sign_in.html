@@ -1,0 +1,29 @@
+<div id="inlog_menu">
+<h1> Welcome </h1>
+<span>
+Welcome to Steam Euro / Hour calculator.<br />
+Insert your steamID below to find out what you have spend per hour for each game in your steam library.<br />
+Having trouble finding your steamID? Go to <a target="_blank" href="https://steamid.io/">THIS</a> site and use steamID64.<br />
+<br />
+</span>
+
+<form ng-submit="sign_in_form.$valid && send()" name="sign_in_form">
+    <div>
+        <input name="steamid_field"
+               type="text"
+               ng-model="name"
+               placeholder="76561198011289296"
+               ng-required="true"
+               ng-minlength="16"
+               ng-maxlength="18"
+               ng-pattern="/^[0-9]{16,18}$/"
+               required/>
+    </div>
+    <span ng-show="sign_in_form.$submitted && sign_in_form.steamid_field.$error.pattern">Not a valid number!</span>
+    <span ng-show="sign_in_form.$submitted && sign_in_form.steamid_field.$error.required">This field is required!</span>
+    <br />
+    <div>
+        <button type="submit" ><span>Calculate</span></button>
+    </div>
+</form>
+</div>

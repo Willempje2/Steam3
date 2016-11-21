@@ -1,0 +1,64 @@
+
+<div id="navbar">
+						
+		<a ng-href="#!/" class="nav_item">
+			<span>Home</span>
+		</a>
+           			
+		<a ng-href="index.php#!/home/{{steamid_url}}" class="nav_item">
+			<span>Library</span>
+		</a>
+
+						
+		<a ng-href="index.php#!/friendlist/{{steamid_url}}" class="nav_item  active">
+			<span>Friendlist</span>
+		</a>
+
+						
+		<a ng-href="index.php#!/recommended/{{steamid_url}}" class="nav_item">
+			<span>Recommended</span>
+		</a>
+								
+</div>
+
+
+
+<div ng-repeat="friend in friend_list" class="friend_holder">
+	<div class="col-sm-4">
+    	<a target="_blank" ng-href="{{friend.profileurl}}" >
+        	<div class="friend_img_holder">
+            	<div class="friend_inner_img_holder">
+        			<img ng-src="{{friend.avatarfull}}" alt="Avatar" />
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-sm-8">
+        <p><h3><a target="_blank" ng-href="{{friend.profileurl}}" >{{ friend.personaname }}</a></h3></p>
+        <p>{{ translate_personastate(friend.personastate) }}</p>
+        <p ng-if="friend.personastate == 0">{{ timestamp_to_delta_time(friend.lastlogoff) }}</p>
+        <P>
+        	<a ng-href="index.php#!/home/{{friend.steamid}}" class="btn calc_btn" >
+            	Cacluclate his/her steam library!
+        		<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+            </a>
+        </P>
+    </div>
+</div>
+
+
+<div class="loading" ng-class="{'hidden': load_done}">
+    <h2> This may take a few seconds... please wait a moment. </h2>
+    
+    <div class="cs-loader">
+      <div class="cs-loader-inner">
+        <label>	●</label>
+        <label>	●</label>
+        <label>	●</label>
+        <label>	●</label>
+        <label>	●</label>
+        <label>	●</label>
+      </div>
+    </div>
+
+</div>

@@ -1,0 +1,36 @@
+
+<div id="navbar">
+						
+		<a ng-href="#!/" class="nav_item">
+			<span>Home</span>
+		</a>
+           			
+		<a ng-href="index.php#!/home/{{steamid_url}}" class="nav_item">
+			<span>Library</span>
+		</a>
+
+						
+		<a ng-href="index.php#!/friendlist/{{steamid_url}}" class="nav_item">
+			<span>Friendlist</span>
+		</a>
+
+						
+		<a ng-href="index.php#!/recommended/{{steamid_url}}" class="nav_item active">
+			<span>Recommended</span>
+		</a>
+								
+</div>
+
+<div ng-class="{'hidden': update_warning}">
+	<h2> First let the site update your library before going to the recommended page. </h2>
+</div>
+
+
+<div id="recommended_games">
+    <div ng-repeat="game in recommended_data| orderBy:'-app_rating' | limitTo:15" class="recommended_game">
+        <a ng-href="http://store.steampowered.com/app/{{game.app_id}}/">
+        	<img ng-src="http://cdn.akamai.steamstatic.com/steam/apps/{{game.app_id}}/header.jpg" />
+            <p>{{app_rating}}</p>
+        </a>
+	</div>
+</div>
