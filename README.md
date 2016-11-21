@@ -15,7 +15,7 @@ Als je zelf geen steamID hebt is hier een voorbeeld ID:
 Na het bekijken van je eigen steam library is het ook mogelijk om die van je vrienden te bekijken.
 Dit kan via de "Friendlist" button.
 
-Om zo min mogelijk requests naar de ‘Steam web api’ te sturen is het systeem zo gebouwt dat alle gegevens eerst in mijn eigen database opgeslagen worden en dan pas getoond worden.
+Om zo min mogelijk requests naar de ‘Steam web api’ te sturen is het systeem zo gebouwd dat alle gegevens eerst in mijn eigen database opgeslagen worden en dan pas getoond worden.
 
 Naast de "library" en "friendlist" functies bestaat er ook een recommendation feature.
 Deze berekent op basis van de overeenkomstigheid van spellen die je met andere gebruikers deelt en speeltijd die hierin zit wat voor jou de beste game zou kunnen zijn om te kopen.
